@@ -12956,7 +12956,7 @@ var require_signal_exit = __commonJS((exports, module) => {
       emitter.on(ev, cb);
       return remove;
     };
-    unload = function unload() {
+    unload = function unload2() {
       if (!loaded || !processOk(global.process)) {
         return;
       }
@@ -12971,7 +12971,7 @@ var require_signal_exit = __commonJS((exports, module) => {
       emitter.count -= 1;
     };
     module.exports.unload = unload;
-    emit = function emit(event, code, signal) {
+    emit = function emit2(event, code, signal) {
       if (emitter.emitted[event]) {
         return;
       }
@@ -13000,7 +13000,7 @@ var require_signal_exit = __commonJS((exports, module) => {
       return signals;
     };
     loaded = false;
-    load = function load() {
+    load = function load2() {
       if (loaded || !processOk(global.process)) {
         return;
       }
@@ -13019,7 +13019,7 @@ var require_signal_exit = __commonJS((exports, module) => {
     };
     module.exports.load = load;
     originalProcessReallyExit = process4.reallyExit;
-    processReallyExit = function processReallyExit(code) {
+    processReallyExit = function processReallyExit2(code) {
       if (!processOk(global.process)) {
         return;
       }
@@ -13029,7 +13029,7 @@ var require_signal_exit = __commonJS((exports, module) => {
       originalProcessReallyExit.call(process4, process4.exitCode);
     };
     originalProcessEmit = process4.emit;
-    processEmit = function processEmit(ev, arg) {
+    processEmit = function processEmit2(ev, arg) {
       if (ev === "exit" && processOk(global.process)) {
         if (arg !== undefined) {
           process4.exitCode = arg;
@@ -28366,11 +28366,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -28779,11 +28779,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -28888,11 +28888,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -29373,11 +29373,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -29543,11 +29543,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -29567,7 +29567,7 @@ var require_backend = __commonJS((exports, module) => {
           var objectProto = Object.prototype;
           var objectToString = objectProto.toString;
           var { max: nativeMax, min: nativeMin } = Math;
-          var now = function now() {
+          var now = function now2() {
             return root.Date.now();
           };
           function debounce3(func, wait, options) {
@@ -29704,11 +29704,11 @@ var require_backend = __commonJS((exports, module) => {
           var hasSymbol = typeof Symbol === "function" && process4.env._nodeLRUCacheForceNoSymbol !== "1";
           var makeSymbol;
           if (hasSymbol) {
-            makeSymbol = function makeSymbol(key) {
+            makeSymbol = function makeSymbol2(key) {
               return Symbol(key);
             };
           } else {
-            makeSymbol = function makeSymbol(key) {
+            makeSymbol = function makeSymbol2(key) {
               return "_" + key;
             };
           }
@@ -29759,7 +29759,7 @@ var require_backend = __commonJS((exports, module) => {
               this[MAX] = mL;
               trim(this);
             },
-            get: function get() {
+            get: function get2() {
               return this[MAX];
             },
             enumerable: true
@@ -29768,7 +29768,7 @@ var require_backend = __commonJS((exports, module) => {
             set: function set(allowStale) {
               this[ALLOW_STALE] = !!allowStale;
             },
-            get: function get() {
+            get: function get2() {
               return this[ALLOW_STALE];
             },
             enumerable: true
@@ -29781,7 +29781,7 @@ var require_backend = __commonJS((exports, module) => {
               this[MAX_AGE] = mA;
               trim(this);
             },
-            get: function get() {
+            get: function get2() {
               return this[MAX_AGE];
             },
             enumerable: true
@@ -29801,19 +29801,19 @@ var require_backend = __commonJS((exports, module) => {
               }
               trim(this);
             },
-            get: function get() {
+            get: function get2() {
               return this[LENGTH_CALCULATOR];
             },
             enumerable: true
           });
           Object.defineProperty(LRUCache.prototype, "length", {
-            get: function get() {
+            get: function get2() {
               return this[LENGTH];
             },
             enumerable: true
           });
           Object.defineProperty(LRUCache.prototype, "itemCount", {
-            get: function get() {
+            get: function get2() {
               return this[LRU_LIST].length;
             },
             enumerable: true
@@ -30328,7 +30328,7 @@ var require_backend = __commonJS((exports, module) => {
             get: function get() {
               return this._data.size;
             },
-            set: function set(n) {},
+            set: function set2(n) {},
             enumerable: true,
             configurable: true
           });
@@ -30365,11 +30365,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -30510,7 +30510,7 @@ var require_backend = __commonJS((exports, module) => {
           } else {
             module2.exports = function inherits(ctor, superCtor) {
               ctor.super_ = superCtor;
-              var TempCtor = function TempCtor() {};
+              var TempCtor = function TempCtor2() {};
               TempCtor.prototype = superCtor.prototype;
               ctor.prototype = new TempCtor;
               ctor.prototype.constructor = ctor;
@@ -30521,11 +30521,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -30540,11 +30540,11 @@ var require_backend = __commonJS((exports, module) => {
           function _typeof(obj) {
             "@babel/helpers - typeof";
             if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return typeof obj2;
               };
             } else {
-              _typeof = function _typeof(obj2) {
+              _typeof = function _typeof2(obj2) {
                 return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
               };
             }
@@ -31511,7 +31511,7 @@ var require_backend = __commonJS((exports, module) => {
             return sessionStorage.setItem(key, value);
           } catch (error) {}
         }
-        var simpleIsEqual = function simpleIsEqual(a, b) {
+        var simpleIsEqual = function simpleIsEqual2(a, b) {
           return a === b;
         };
         function esm(resultFn) {
@@ -31520,10 +31520,10 @@ var require_backend = __commonJS((exports, module) => {
           var lastArgs = [];
           var lastResult = undefined;
           var calledOnce = false;
-          var isNewArgEqualToLast = function isNewArgEqualToLast(newArg, index) {
+          var isNewArgEqualToLast = function isNewArgEqualToLast2(newArg, index) {
             return isEqual(newArg, lastArgs[index]);
           };
-          var result = function result() {
+          var result = function result2() {
             for (var _len = arguments.length, newArgs = Array(_len), _key = 0;_key < _len; _key++) {
               newArgs[_key] = arguments[_key];
             }
@@ -32139,11 +32139,11 @@ var require_backend = __commonJS((exports, module) => {
         function _typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            _typeof = function _typeof(obj2) {
+            _typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            _typeof = function _typeof(obj2) {
+            _typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -32236,11 +32236,11 @@ var require_backend = __commonJS((exports, module) => {
         function esm_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            esm_typeof = function _typeof(obj2) {
+            esm_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            esm_typeof = function _typeof(obj2) {
+            esm_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -32305,7 +32305,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (Array.isArray(arr))
             return arr;
         }
-        var compareVersions = function compareVersions(v1, v2) {
+        var compareVersions = function compareVersions2(v1, v2) {
           var n1 = validateAndParse(v1);
           var n2 = validateAndParse(v2);
           var p1 = n1.pop();
@@ -32320,15 +32320,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
           return 0;
         };
-        var validate2 = function validate(version) {
+        var validate2 = function validate3(version) {
           return typeof version === "string" && /^[v\d]/.test(version) && semver11.test(version);
         };
-        var compare = function compare(v1, v2, operator) {
+        var compare = function compare2(v1, v2, operator) {
           assertValidOperator(operator);
           var res = compareVersions(v1, v2);
           return operatorResMap[operator].includes(res);
         };
-        var satisfies = function satisfies(version, range) {
+        var satisfies = function satisfies2(version, range) {
           var m = range.match(/^([<>=~^]+)/);
           var op = m ? m[1] : "=";
           if (op !== "^" && op !== "~")
@@ -32356,7 +32356,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return true;
         };
         var semver11 = /^[v^~<>=]*?(\d+)(?:\.([x*]|\d+)(?:\.([x*]|\d+)(?:\.([x*]|\d+))?(?:-([\da-z\-]+(?:\.[\da-z\-]+)*))?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?)?)?$/i;
-        var validateAndParse = function validateAndParse(version) {
+        var validateAndParse = function validateAndParse2(version) {
           if (typeof version !== "string") {
             throw new TypeError("Invalid argument expected string");
           }
@@ -32367,17 +32367,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           match.shift();
           return match;
         };
-        var isWildcard = function isWildcard(s) {
+        var isWildcard = function isWildcard2(s) {
           return s === "*" || s === "x" || s === "X";
         };
-        var tryParse = function tryParse(v) {
+        var tryParse = function tryParse2(v) {
           var n = parseInt(v, 10);
           return isNaN(n) ? v : n;
         };
-        var forceType = function forceType(a, b) {
+        var forceType = function forceType2(a, b) {
           return esm_typeof(a) !== esm_typeof(b) ? [String(a), String(b)] : [a, b];
         };
-        var compareStrings = function compareStrings(a, b) {
+        var compareStrings = function compareStrings2(a, b) {
           if (isWildcard(a) || isWildcard(b))
             return 0;
           var _forceType = forceType(tryParse(a), tryParse(b)), _forceType2 = _slicedToArray(_forceType, 2), ap = _forceType2[0], bp = _forceType2[1];
@@ -32387,7 +32387,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             return -1;
           return 0;
         };
-        var compareSegments = function compareSegments(a, b) {
+        var compareSegments = function compareSegments2(a, b) {
           for (var i = 0;i < Math.max(a.length, b.length); i++) {
             var r = compareStrings(a[i] || "0", b[i] || "0");
             if (r !== 0)
@@ -32403,7 +32403,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           "<": [-1]
         };
         var allowedOperators = Object.keys(operatorResMap);
-        var assertValidOperator = function assertValidOperator(op) {
+        var assertValidOperator = function assertValidOperator2(op) {
           if (typeof op !== "string") {
             throw new TypeError("Invalid operator type, expected string but got ".concat(esm_typeof(op)));
           }
@@ -32417,11 +32417,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function ReactSymbols_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            ReactSymbols_typeof = function _typeof(obj2) {
+            ReactSymbols_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            ReactSymbols_typeof = function _typeof(obj2) {
+            ReactSymbols_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -32484,11 +32484,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function utils_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            utils_typeof = function _typeof(obj2) {
+            utils_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            utils_typeof = function _typeof(obj2) {
+            utils_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -32547,7 +32547,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function getAllEnumerableKeys(obj) {
           var keys = new Set;
           var current = obj;
-          var _loop = function _loop() {
+          var _loop = function _loop2() {
             var currentKeys = [].concat(_toConsumableArray(Object.keys(current)), _toConsumableArray(Object.getOwnPropertySymbols(current)));
             var descriptors = Object.getOwnPropertyDescriptors(current);
             currentKeys.forEach(function(key) {
@@ -33102,7 +33102,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }
           }
         }
-        var isPlainObject = function isPlainObject(object) {
+        var isPlainObject = function isPlainObject2(object) {
           var objectPrototype = Object.getPrototypeOf(object);
           if (!objectPrototype)
             return true;
@@ -33505,11 +33505,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function backend_utils_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            backend_utils_typeof = function _typeof(obj2) {
+            backend_utils_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            backend_utils_typeof = function _typeof(obj2) {
+            backend_utils_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -34281,11 +34281,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function DevToolsComponentStackFrame_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            DevToolsComponentStackFrame_typeof = function _typeof(obj2) {
+            DevToolsComponentStackFrame_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            DevToolsComponentStackFrame_typeof = function _typeof(obj2) {
+            DevToolsComponentStackFrame_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -34325,7 +34325,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           disableLogs();
           try {
             if (construct) {
-              var Fake = function Fake() {
+              var Fake = function Fake2() {
                 throw Error();
               };
               Object.defineProperty(Fake.prototype, "props", {
@@ -34549,11 +34549,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function profilingHooks_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            profilingHooks_typeof = function _typeof(obj2) {
+            profilingHooks_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            profilingHooks_typeof = function _typeof(obj2) {
+            profilingHooks_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -35323,7 +35323,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               if (it)
                 o = it;
               var i = 0;
-              var F = function F() {};
+              var F = function F2() {};
               return { s: F, n: function n() {
                 if (i >= o.length)
                   return { done: true };
@@ -35379,11 +35379,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function renderer_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            renderer_typeof = function _typeof(obj2) {
+            renderer_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            renderer_typeof = function _typeof(obj2) {
+            renderer_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -35824,7 +35824,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
           registerRenderer(renderer, onErrorOrWarning);
           patchConsoleUsingWindowValues();
-          var debug2 = function debug(name, fiber, parentFiber) {
+          var debug2 = function debug3(name, fiber, parentFiber) {
             var extraString = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
             if (__DEBUG__) {
               var displayName = fiber.tag + ":" + (getDisplayNameForFiber(fiber) || "null");
@@ -38074,7 +38074,7 @@ The error thrown in the component is:
               isFullMatch: trackedPathMatchDepth === trackedPath.length - 1
             };
           }
-          var formatPriorityLevel = function formatPriorityLevel(priorityLevel) {
+          var formatPriorityLevel = function formatPriorityLevel2(priorityLevel) {
             if (priorityLevel == null) {
               return "Unknown";
             }
@@ -38162,7 +38162,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               if (it)
                 o = it;
               var i = 0;
-              var F = function F() {};
+              var F = function F2() {};
               return { s: F, n: function n() {
                 if (i >= o.length)
                   return { done: true };
@@ -38289,7 +38289,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               return;
             }
             var originalConsoleMethods = {};
-            unpatchFn = function unpatchFn() {
+            unpatchFn = function unpatchFn2() {
               for (var _method2 in originalConsoleMethods) {
                 try {
                   targetConsole[_method2] = originalConsoleMethods[_method2];
@@ -38299,7 +38299,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             OVERRIDE_CONSOLE_METHODS.forEach(function(method2) {
               try {
                 var originalMethod = originalConsoleMethods[method2] = targetConsole[method2].__REACT_DEVTOOLS_ORIGINAL_METHOD__ ? targetConsole[method2].__REACT_DEVTOOLS_ORIGINAL_METHOD__ : targetConsole[method2];
-                var overrideMethod = function overrideMethod() {
+                var overrideMethod = function overrideMethod2() {
                   var shouldAppendWarningStack = false;
                   for (var _len = arguments.length, args = new Array(_len), _key = 0;_key < _len; _key++) {
                     args[_key] = arguments[_key];
@@ -38377,7 +38377,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               return;
             }
             var originalConsoleMethods = {};
-            unpatchForStrictModeFn = function unpatchForStrictModeFn() {
+            unpatchForStrictModeFn = function unpatchForStrictModeFn2() {
               for (var _method3 in originalConsoleMethods) {
                 try {
                   targetConsole[_method3] = originalConsoleMethods[_method3];
@@ -38387,7 +38387,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             overrideConsoleMethods.forEach(function(method2) {
               try {
                 var originalMethod = originalConsoleMethods[method2] = targetConsole[method2].__REACT_DEVTOOLS_STRICT_MODE_ORIGINAL_METHOD__ ? targetConsole[method2].__REACT_DEVTOOLS_STRICT_MODE_ORIGINAL_METHOD__ : targetConsole[method2];
-                var overrideMethod = function overrideMethod() {
+                var overrideMethod = function overrideMethod2() {
                   if (!consoleSettingsRef.hideConsoleLogsInStrictMode) {
                     for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0;_key2 < _len2; _key2++) {
                       args[_key2] = arguments[_key2];
@@ -38450,11 +38450,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function bridge_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            bridge_typeof = function _typeof(obj2) {
+            bridge_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            bridge_typeof = function _typeof(obj2) {
+            bridge_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -38527,7 +38527,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             _setPrototypeOf(subClass, superClass);
         }
         function _setPrototypeOf(o, p) {
-          _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o2, p2) {
+          _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p2) {
             o2.__proto__ = p2;
             return o2;
           };
@@ -38573,7 +38573,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
         }
         function _getPrototypeOf(o) {
-          _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o2) {
+          _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf2(o2) {
             return o2.__proto__ || Object.getPrototypeOf(o2);
           };
           return _getPrototypeOf(o);
@@ -38732,11 +38732,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function agent_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            agent_typeof = function _typeof(obj2) {
+            agent_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            agent_typeof = function _typeof(obj2) {
+            agent_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -38773,7 +38773,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             agent_setPrototypeOf(subClass, superClass);
         }
         function agent_setPrototypeOf(o, p) {
-          agent_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o2, p2) {
+          agent_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p2) {
             o2.__proto__ = p2;
             return o2;
           };
@@ -38819,7 +38819,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
         }
         function agent_getPrototypeOf(o) {
-          agent_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o2) {
+          agent_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf2(o2) {
             return o2.__proto__ || Object.getPrototypeOf(o2);
           };
           return agent_getPrototypeOf(o);
@@ -38832,7 +38832,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
           return obj;
         }
-        var debug = function debug(methodName) {
+        var debug = function debug2(methodName) {
           if (__DEBUG__) {
             var _console;
             for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1;_key < _len; _key++) {
@@ -39321,11 +39321,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function hook_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            hook_typeof = function _typeof(obj2) {
+            hook_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            hook_typeof = function _typeof(obj2) {
+            hook_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -39471,7 +39471,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               return;
             }
             var originalConsoleMethods = {};
-            unpatchFn2 = function unpatchFn() {
+            unpatchFn2 = function unpatchFn3() {
               for (var _method2 in originalConsoleMethods) {
                 try {
                   targetConsole2[_method2] = originalConsoleMethods[_method2];
@@ -39481,7 +39481,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             overrideConsoleMethods.forEach(function(method3) {
               try {
                 var originalMethod = originalConsoleMethods[method3] = targetConsole2[method3].__REACT_DEVTOOLS_STRICT_MODE_ORIGINAL_METHOD__ ? targetConsole2[method3].__REACT_DEVTOOLS_STRICT_MODE_ORIGINAL_METHOD__ : targetConsole2[method3];
-                var overrideMethod = function overrideMethod() {
+                var overrideMethod = function overrideMethod2() {
                   if (!hideConsoleLogsInStrictMode) {
                     var color;
                     switch (method3) {
@@ -39757,11 +39757,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function legacy_renderer_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            legacy_renderer_typeof = function _typeof(obj2) {
+            legacy_renderer_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            legacy_renderer_typeof = function _typeof(obj2) {
+            legacy_renderer_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -39826,26 +39826,26 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           var internalInstanceToRootIDMap = new WeakMap;
           var getInternalIDForNative = null;
           var findNativeNodeForInternalID;
-          var getFiberForNative = function getFiberForNative(node) {
+          var getFiberForNative = function getFiberForNative2(node) {
             return null;
           };
           if (renderer.ComponentTree) {
-            getInternalIDForNative = function getInternalIDForNative(node, findNearestUnfilteredAncestor) {
+            getInternalIDForNative = function getInternalIDForNative2(node, findNearestUnfilteredAncestor) {
               var internalInstance = renderer.ComponentTree.getClosestInstanceFromNode(node);
               return internalInstanceToIDMap.get(internalInstance) || null;
             };
-            findNativeNodeForInternalID = function findNativeNodeForInternalID(id) {
+            findNativeNodeForInternalID = function findNativeNodeForInternalID2(id) {
               var internalInstance = idToInternalInstanceMap.get(id);
               return renderer.ComponentTree.getNodeFromInstance(internalInstance);
             };
-            getFiberForNative = function getFiberForNative(node) {
+            getFiberForNative = function getFiberForNative2(node) {
               return renderer.ComponentTree.getClosestInstanceFromNode(node);
             };
           } else if (renderer.Mount.getID && renderer.Mount.getNode) {
-            getInternalIDForNative = function getInternalIDForNative(node, findNearestUnfilteredAncestor) {
+            getInternalIDForNative = function getInternalIDForNative2(node, findNearestUnfilteredAncestor) {
               return null;
             };
-            findNativeNodeForInternalID = function findNativeNodeForInternalID(id) {
+            findNativeNodeForInternalID = function findNativeNodeForInternalID2(id) {
               return null;
             };
           }
@@ -40451,26 +40451,26 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }
             }
           }
-          var getProfilingData = function getProfilingData() {
+          var getProfilingData = function getProfilingData2() {
             throw new Error("getProfilingData not supported by this renderer");
           };
-          var handleCommitFiberRoot = function handleCommitFiberRoot() {
+          var handleCommitFiberRoot = function handleCommitFiberRoot2() {
             throw new Error("handleCommitFiberRoot not supported by this renderer");
           };
-          var handleCommitFiberUnmount = function handleCommitFiberUnmount() {
+          var handleCommitFiberUnmount = function handleCommitFiberUnmount2() {
             throw new Error("handleCommitFiberUnmount not supported by this renderer");
           };
-          var handlePostCommitFiberRoot = function handlePostCommitFiberRoot() {
+          var handlePostCommitFiberRoot = function handlePostCommitFiberRoot2() {
             throw new Error("handlePostCommitFiberRoot not supported by this renderer");
           };
-          var overrideError = function overrideError() {
+          var overrideError = function overrideError2() {
             throw new Error("overrideError not supported by this renderer");
           };
-          var overrideSuspense = function overrideSuspense() {
+          var overrideSuspense = function overrideSuspense2() {
             throw new Error("overrideSuspense not supported by this renderer");
           };
-          var startProfiling = function startProfiling() {};
-          var stopProfiling = function stopProfiling() {};
+          var startProfiling = function startProfiling2() {};
+          var stopProfiling = function stopProfiling2() {};
           function getBestMatchForTrackedPath() {
             return null;
           }
@@ -40554,7 +40554,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             hook2.sub("operations", agent2.onHookOperations),
             hook2.sub("traceUpdates", agent2.onTraceUpdates)
           ];
-          var attachRenderer = function attachRenderer(id, renderer) {
+          var attachRenderer = function attachRenderer2(id, renderer) {
             if (!isMatchingRender(renderer.reconcilerVersion || renderer.version)) {
               return;
             }
@@ -40588,7 +40588,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }));
           hook2.emit("react-devtools", agent2);
           hook2.reactDevtoolsAgent = agent2;
-          var onAgentShutdown = function onAgentShutdown() {
+          var onAgentShutdown = function onAgentShutdown2() {
             subs.forEach(function(fn) {
               return fn();
             });
@@ -40672,11 +40672,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function setupNativeStyleEditor_typeof(obj) {
           "@babel/helpers - typeof";
           if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-            setupNativeStyleEditor_typeof = function _typeof(obj2) {
+            setupNativeStyleEditor_typeof = function _typeof2(obj2) {
               return typeof obj2;
             };
           } else {
-            setupNativeStyleEditor_typeof = function _typeof(obj2) {
+            setupNativeStyleEditor_typeof = function _typeof2(obj2) {
               return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
             };
           }
@@ -41040,7 +41040,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             } else {
               var lazyResolveRNStyle;
               var lazyNativeStyleEditorValidAttributes;
-              var initAfterTick = function initAfterTick() {
+              var initAfterTick = function initAfterTick2() {
                 if (bridge !== null) {
                   setupNativeStyleEditor(bridge, agent2, lazyResolveRNStyle, lazyNativeStyleEditorValidAttributes);
                 }
